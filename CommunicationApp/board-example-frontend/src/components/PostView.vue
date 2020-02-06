@@ -19,8 +19,8 @@ export default {
             validator (post){
                 const isValidPostId = typeof post.id === 'number'
                 const isValidTitle = !!post.title && post.title.length
-                const isValidContnets = post.contents && post.contents.length
-                return isValidPostId && isValidTitle && isValidContnets;
+                const isValidContents = post.contents && post.contents.length
+                return isValidPostId && isValidTitle && isValidContents;
             }
         }
     }

@@ -32,9 +32,7 @@ export default{
 
     signinByToken({ commit } , token){
         commit(SET_ACCESS_TOKEN, token)
-
-        return api.get('/users/me')
-        .then(res => {
+        return api.get('/users/me').then(res => {
             commit(SET_MY_INFO, res.data)
         })
     },
