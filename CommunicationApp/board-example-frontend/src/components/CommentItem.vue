@@ -64,7 +64,7 @@ export default {
         onEdit(){
             if(this.isValidComment){
                 this.isEditing = false
-                const { id } = this.comment.id
+                const { id } = this.comment
                 this.$emit('edit',{id, comment: this.editMessage})
             }else{
                 alert('댓글은 1자 이상 255자 이하여야 합니다.')

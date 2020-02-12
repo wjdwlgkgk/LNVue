@@ -27,10 +27,11 @@ export default {
         }
     },
     methods:{
-        onEdit(){
+        onEdit({ id, comment}){ // 이거 비어있는걸로 책에 나옴. 곡횸
             this.editComment({commentId: id, comment })
             .then(res => {
                 alert('댓글이 수정되었습니다.')
+                window.location.reload();
             })
             .catch(err =>{
                 if(err.response.status === 401){
